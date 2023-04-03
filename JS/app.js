@@ -9,7 +9,7 @@ var username = prompt("Enter your name:");
 
 var gender = prompt("Enter your gender (Male/Female):");
 
-if (gender !== "Male" && gender !== "Female" ) {
+if (gender.toLowerCase() !== "male" && gender.toLowerCase() !== "female" ) {
 
   alert("Invalid input!");
 }
@@ -27,12 +27,17 @@ let message = confirm("Do you want to skip the welcoming message? ");
 
 if(message === false){
 
-    if (gender === "Female") {
+    if (gender.toLowerCase() === "female") {
     alert("Welcome, Ms."  +username+" !");
-}else if(gender =="Male"){
+}else if(gender.toLowerCase() =="male"){
     alert("Welcome, Mr. " +username+" !");
+}else{
+    alert("Welcome, " + username + "!");
 }
 
 }
+
+
+
 
 
